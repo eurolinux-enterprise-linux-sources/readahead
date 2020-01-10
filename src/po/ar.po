@@ -1,0 +1,129 @@
+# Arabic translation of PACKAGE.
+# Copyright (C) 2007 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# , fuzzy
+#
+#
+# Laith Juwaidah <ljuwaidah@gmail.com>, 2007, 2009.
+# Tareq Al Jurf <taljurf@fedoraproject.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: readahead-1.5\n"
+"Report-Msgid-Bugs-To: kzak@redhat.com\n"
+"POT-Creation-Date: 2010-03-24 16:51+0100\n"
+"PO-Revision-Date: 2009-11-19 10:38+0300\n"
+"Last-Translator: Tareq Al Jurf <taljurf@fedoraproject.org>\n"
+"Language-Team: Arabic <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/readahead.c:121
+#, c-format
+msgid "%s: error: max device count reached.\n"
+msgstr "%s: خطأ: تم الوصول الى العدد الأقصى للأجهزة.\n"
+
+#: src/readahead.c:164
+#, c-format
+msgid "%s: error: ext2fs_open_inode_scan failed\n"
+msgstr "%s: خطأ: ext2fs_open_inode_scan فشل\n"
+
+#: src/readahead.c:169
+#, c-format
+msgid "%s: error: ext2fs_open_inode_scan() failed\n"
+msgstr "%s: خطأ: ext2fs_open_inode_scan() فشل\n"
+
+#: src/readahead.c:196 src/readahead.c:405
+#, c-format
+msgid "%s: error: %s: %s\n"
+msgstr "%s: خطأ: %s: %s\n"
+
+#: src/readahead.c:213
+#, c-format
+msgid "%s: error: %s: unexpected format of sorted file\n"
+msgstr "%s: خطأ: %s: تنسيق غير متوقع لملف مرتب\n"
+
+#: src/readahead.c:234
+#, c-format
+msgid "%s: error: max file count reached\n"
+msgstr "%s: خطأ: تم الوصول للعدد الأقصى للملفات\n"
+
+#: src/readahead.c:244
+#, c-format
+msgid "Time (read lists): %ld ms\n"
+msgstr "وقت (قائمة القراءة): %ld م.ث.\n"
+
+#: src/readahead.c:248
+#, c-format
+msgid "Create list with %d files\n"
+msgstr "إصنع قائمة ب %d ملفات\n"
+
+#: src/readahead.c:344
+#, c-format
+msgid "Time (read blocks): %ld ms\n"
+msgstr "وقت (مقاطع القراءة): %ld م.ث.\n"
+
+#: src/readahead.c:348
+#, c-format
+msgid "Read blocks for %d/%d files (%llu KB)\n"
+msgstr "مقاطع قراءة %d/%d ملفات (%llu ك.ب.)\n"
+
+#: src/readahead.c:389
+#, c-format
+msgid "Time (readahead): %ld ms\n"
+msgstr "وقت (readahead): %ld م.ث.\n"
+
+#: src/readahead.c:392
+#, c-format
+msgid "Preload %d/%d files (%llu KB)\n"
+msgstr "حمل %d/%d ملفات مسبقا (%llu ك.ب.)\n"
+
+#: src/readahead.c:424
+#, c-format
+msgid ""
+"\n"
+"%s [options] <file> [...]\n"
+"\n"
+msgstr ""
+"\n"
+"%s [إختيارات] <ملف> [...]\n"
+"\n"
+
+#: src/readahead.c:425
+msgid ""
+"  -s | --sort            sort list of files only\n"
+"  -o | --output <file>   output sorted list of files\n"
+"  -d | --dont-sort       call readahead(2) for already sorted list\n"
+"  -h | --help            this help\n"
+"  -v | --verbose         verbose mode\n"
+"  -t | --timing          report wasted time\n"
+"  -m | --maxsize <10240> max size of a file to be preloaded (in KiB)\n"
+"\n"
+msgstr ""
+"  -s | --sort           رتب قائمة ملفات فقط\n"
+"  -o | --output <ملف>  أخرج قائمة ملفات مرتبة\n"
+"  -d | --dont-sort      إستدعي readahead(2) لقائمة مرتبة\n"
+"  -h | --help           هذه المساعدة\n"
+"  -v | --verbose        نمط كلامي\n"
+"  -t | --timing         أعطي تقريرا بالوقت الضائع\n"
+"  -m | --الحجم-الأقصى <10240> الحجم الأقى لملف المحمل مسبقا (بـ ك.ب)\n"
+
+#: src/readahead.c:504
+#, c-format
+msgid "Mode: %s\n"
+msgstr "نمط: %s\n"
+
+#: src/readahead.c:508
+#, c-format
+msgid "Output: %s\n"
+msgstr "خروج: %s\n"
+
+#: src/readahead.c:510
+#, c-format
+msgid "List: %s\n"
+msgstr "قائمة: %s\n"
+
+#: src/readahead.c:547
+#, c-format
+msgid "Time total: %ld ms\n"
+msgstr "مجموع الوقت: %ld م.ث.\n"

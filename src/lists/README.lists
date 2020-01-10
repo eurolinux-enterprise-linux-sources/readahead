@@ -1,0 +1,48 @@
+
+ Readahead lists naming convention
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ {early,later}.sorted
+
+	The sorted lists are used for "fast mode" and this kind of lists has
+	the greater priority for boot scripts. These lists are generated from
+	custom.{early,later} or *.{early,later} lists by (for example):
+
+		readahead  --sort --output=early.sorted foo.early
+
+	To keep your lists actual you can add this command to the crontab.
+
+
+ custom.{early,later}
+
+	This is customised version of "full mode" lists. These lists are
+	generated for your machine by readahead-collector during boot process.
+
+	To generate these lists you have to boot with:
+
+		init=/sbin/readahead-collector
+
+	Please, don't add this option to your grub.conf permanently (due to
+	negative performance impact).
+
+
+ *.{early,later}
+
+	These are lists with the lowest priority.
+
+
+ Arch independent lists
+ ~~~~~~~~~~~~~~~~~~~~~~
+
+ If you want to distribute architecture independents lists (for example in
+ src.rpm), use:
+
+	readahead-check --template=arch_spec.list --output=arch_indep.list
+
+ to convert back to arch-specific version use lists/Makefile and
+
+	make rpm-lists-rebuild FILES="default.early default.later" \
+					RPM_ARCH=x86_64 RPM_LIB=lib64
+
+
+Karel Zak <kzak@redhat.com>

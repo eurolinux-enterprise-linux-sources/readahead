@@ -1,0 +1,21 @@
+
+* reduce number of fields in audit events and store to memory simplificated
+  events only. I hope libauparse doesn't have care about number of fields.
+
+* add RAC_MAXDELAY and stop collecting if no events has comm in that time:
+
+	Tony Nelson wrote:
+	> Readahead-collector runs for 5 minutes, so its output might need pruning if
+	> it ran each boot.  When run manually, one knows to start stuff up and then
+	> wait for readahead to finish.  BTW, the collection loop has a 30 second
+	> timeout that isn't being used.  It might be reasonable to stop collecting
+	> if no event has come in in that time.
+
+
+* enable collector on demand:
+
+	Tony Nelson wrote:
+	> If readahead-collect could run automatically, readahead might request it
+	> for the next boot if "too many" files are not found (say, after a firefox
+	> update).
+

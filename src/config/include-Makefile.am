@@ -1,0 +1,7 @@
+# The original default vaues of bindir and sbindir:
+usrbinexecdir = ${exec_prefix}/bin
+usrsbinexecdir = ${exec_prefix}/sbin
+
+AM_CPPFLAGS = -Wall -include $(top_builddir)/config.h -DLOCALEDIR=\"$(localedir)\"
+#AM_CFLAGS = -fsigned-char
+

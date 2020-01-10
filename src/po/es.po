@@ -1,0 +1,131 @@
+# Spanish translation of readahead.
+# This file is distributed under the same license as the readahead package.
+#
+# H. Daniel Cabrera <h.daniel.cabrera@gmail.com>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: readahead\n"
+"Report-Msgid-Bugs-To: kzak@redhat.com\n"
+"POT-Creation-Date: 2010-03-24 16:51+0100\n"
+"PO-Revision-Date: 2009-10-06 18:47-0300\n"
+"Last-Translator: Domingo Becker <domingobecker@gmail.com>\n"
+"Language-Team: Fedora Spanish <fedora-trans-es@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: ARGENTINA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: src/readahead.c:121
+#, c-format
+msgid "%s: error: max device count reached.\n"
+msgstr "%s: error: número máximo de dispositivos alcanzado.\n"
+
+#: src/readahead.c:164
+#, c-format
+msgid "%s: error: ext2fs_open_inode_scan failed\n"
+msgstr "%s: error: ext2fs_open_inode_scan falló\n"
+
+#: src/readahead.c:169
+#, c-format
+msgid "%s: error: ext2fs_open_inode_scan() failed\n"
+msgstr "%s: error: ext2fs_open_inode_scan() falló\n"
+
+#: src/readahead.c:196 src/readahead.c:405
+#, c-format
+msgid "%s: error: %s: %s\n"
+msgstr "%s: error: %s: %s\n"
+
+#: src/readahead.c:213
+#, c-format
+msgid "%s: error: %s: unexpected format of sorted file\n"
+msgstr "%s: error: %s: formato inesperado del archivo ordenado\n"
+
+#: src/readahead.c:234
+#, c-format
+msgid "%s: error: max file count reached\n"
+msgstr "%s: error: número máximo de archivos alcanzado\n"
+
+#: src/readahead.c:244
+#, c-format
+msgid "Time (read lists): %ld ms\n"
+msgstr "Tiempo (lectura de listas) %ld ms\n"
+
+#: src/readahead.c:248
+#, c-format
+msgid "Create list with %d files\n"
+msgstr "Crear lista con los archivos %d\n"
+
+#: src/readahead.c:344
+#, c-format
+msgid "Time (read blocks): %ld ms\n"
+msgstr "Tiempo (lectura de bloques): %ld ms\n"
+
+#: src/readahead.c:348
+#, c-format
+msgid "Read blocks for %d/%d files (%llu KB)\n"
+msgstr "Leer bloques para los archivos %d%d (%llu KB)\n"
+
+#: src/readahead.c:389
+#, c-format
+msgid "Time (readahead): %ld ms\n"
+msgstr "Tiempo (readahead): %ld ms\n"
+
+#: src/readahead.c:392
+#, c-format
+msgid "Preload %d/%d files (%llu KB)\n"
+msgstr "Precarga de los archivos %d/%d (%llu KB)\n"
+
+#: src/readahead.c:424
+#, c-format
+msgid ""
+"\n"
+"%s [options] <file> [...]\n"
+"\n"
+msgstr ""
+"\n"
+"%s [opciones] <archivo> [...]\n"
+"\n"
+
+#: src/readahead.c:425
+msgid ""
+"  -s | --sort            sort list of files only\n"
+"  -o | --output <file>   output sorted list of files\n"
+"  -d | --dont-sort       call readahead(2) for already sorted list\n"
+"  -h | --help            this help\n"
+"  -v | --verbose         verbose mode\n"
+"  -t | --timing          report wasted time\n"
+"  -m | --maxsize <10240> max size of a file to be preloaded (in KiB)\n"
+"\n"
+msgstr ""
+"  -s | --sort           lista ordenada de archivos solamente\n"
+"  -o | --output <file>  salida para la lista ordenada de archivos\n"
+"  -d | --dont-sort      llamar readahead(2) para una lista ya ordenada\n"
+"  -h | --help           este contenido de ayuda\n"
+"  -v | --verbose        más mensajes\n"
+"  -t | --timing         informe del tiempo perdido\n"
+"  -m | --maxsize <10240> tamaño máximo de un archivo a precargar (en KiB)\n"
+"\n"
+
+#: src/readahead.c:504
+#, c-format
+msgid "Mode: %s\n"
+msgstr "Modo: %s\n"
+
+#: src/readahead.c:508
+#, c-format
+msgid "Output: %s\n"
+msgstr "Salida: %s\n"
+
+#: src/readahead.c:510
+#, c-format
+msgid "List: %s\n"
+msgstr "Lista: %s\n"
+
+#: src/readahead.c:547
+#, c-format
+msgid "Time total: %ld ms\n"
+msgstr "Tiempo total: %ld ms\n"

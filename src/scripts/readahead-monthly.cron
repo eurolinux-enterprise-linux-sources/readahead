@@ -1,0 +1,6 @@
+#!/bin/sh
+. /etc/sysconfig/readahead
+if [ "$READAHEAD_COLLECT" = "yes" ] ; then
+	touch /.readahead_collect
+fi
+

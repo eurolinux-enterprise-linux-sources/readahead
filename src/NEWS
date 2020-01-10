@@ -1,0 +1,105 @@
+readahead-1.5.6
+   - several bugfixes [Raphael Geissert]
+
+readahead-1.5.5
+   - exit readahead-collector correctly, if audit is not enabled
+   - make delay of services configurable
+   - make minimum memory requirement configurable
+   - log to /dev/kmsg in upstart scripts
+   - upstart scripts updated for upstart 0.6
+
+readahead-1.5.4
+   - cleanup audit filters with AUDIT_FILTER_EXIT
+   - translation update
+
+readahead-1.5.3
+   - close leaked file descriptors
+
+readahead-1.5.2
+   - s/AUDIT_FILTER_ENTRY/AUDIT_FILTER_EXIT/g
+   - also collect openat() calls
+   - ignore files > 10MB
+
+readahead-1.5.1
+   - add syslog() to readahead-collector
+   - console owner to readahead-collector
+
+readahead-1.5.0
+   - exclude complete /var
+
+readahead-1.4.9
+   - run readahead collector on every rpm database change
+   - don't run readahead while collecting
+
+readahead-1.4.8
+   - set low io priority (no more regression in boot time with readahead) [Harald Hoyer]
+   - moved data files from /etc/readahead.d to /var/lib/readahead [Harald Hoyer]
+   - don't start readahead from readahead.event if system has less than 384MB [Harald Hoyer]
+
+readahead-1.4.7
+   - removed default.later from install [Harald Hoyer]
+   - no more error message on missing lists in cron script [Harald Hoyer]
+
+readahead-1.4.6
+   - readahead moved to /sbin [Harald Hoyer]
+   - fixed readahead event script to wait for /usr to be mounted [Harald Hoyer]
+   - let it compile against audit-libs-1.7.5 again [Harald Hoyer]
+
+readahead-1.4.5
+   - readahead to startup with upstart events [Harald Hoyer]
+   - readahead-collector runs monthly with upstart events [Harald Hoyer]
+   - readahead: open files with O_NOATIME [Karel Zak, Arjan van de Ven]
+
+readahead-1.4.4
+   - po: update po files [Karel Zak]
+   - po: add sr.po [Jovan Krunic]
+   - po: add it.po [Francesco Tombolini]
+   - po: add bg.po [Alexander Todorov]
+   - po: add ar.po [Laith Juwaidah]
+   - po: updated Polish translation
+   - collector: add include for PATH_MAX [Karel Zak]
+   - po: add pt_BR translation [Diego Búrigo]
+   - po: add German translation [Fabian Affolter]
+
+readahead-1.4.3
+   - build-sys: add bzip2 automake init  [Karel Zak]
+   - po: update po files  [Karel Zak]
+   - build-sys: fix path to po/  [Karel Zak]
+   - docs: update NEWS, release++  [Karel Zak]
+   - scripts: move _early to S01  [Karel Zak]
+   - readahead: cleanup %ld usage  [Karel Zak]
+   - collector: "(null)" name in the 2nd PATH line overwrite  [Eric Sandeen]
+   - collector: fix debug messages and RAC_EXECIGN usage  [Karel Zak]
+
+readahead-1.4.2
+   - cleanup NEWS and version setting  [Karel Zak]
+   - print versions of autotools  [Karel Zak]
+   - auparse requires as a record separator  [Karel Zak]
+   - add pl.po  [Piotr 'Raven' Dr#g]
+   - fix e-mail setting in Makevars  [Karel Zak]
+   - update po files  [Karel Zak]
+   - remove debug message  [Karel Zak]
+   - add INIT INFOs to init scripts  [Karel Zak]
+   - improve init scripts  [Karel Zak]
+   - add RAC_LISTBEGIN [Karel Zak]
+
+readahead-1.4.1
+   - fix minor typos and add info about arch independent lists
+   - readahead: fix missing type extcode in useage()
+   - docs: fix typos in paths
+   - docs: add info to changelogs
+   - fix typo in init script
+   - fix readahead paths
+
+readahead-1.4.1
+	- backport minor changes from master branch (e.g typos, ..)
+
+readahead-1.4
+   - move project to hosted.fedoraproject.org
+   - source code maintained by GIT
+   - various cleanups
+   - new build-system based on autotools
+   - --sort / --dont-sort support
+   - add readahead-collector (based on audit system)
+   - improve init scripts (supports full, custom and fast mode)
+

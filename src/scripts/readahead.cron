@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#
+# Generates sorted readahead files
+#
+# Copyright (C) 2007  Red Hat, Inc.
+# Karel Zak <kzak@redhat.com>
+#
+
+renice +19 -p $$ >/dev/null 2>&1
+ionice -c3 -p $$ >/dev/null 2>&1
+
+TYPES="early later"
+READAHEAD_CMD="/sbin/readahead"
+READAHEAD_BASE="/var/lib/readahead"
+
+for LTYPE in $TYPES; do
+	if [ -s "$READAHEAD_BASE/custom.$LTYPE" ]; then
+		FLS="$READAHEAD_BASE/custom.$LTYPE"
+	else
+		FLS=$(ls $READAHEAD_BASE/*.$LTYPE 2>/dev/null )
+	fi
+	
+	if [ -n "$FLS" ]; then
+		$READAHEAD_CMD --sort --output=$READAHEAD_BASE/$LTYPE.sorted $FLS &>/dev/null
+	fi
+done
