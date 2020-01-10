@@ -1,11 +1,12 @@
 Summary:        Read a preset list of files into memory
 Name:           readahead
 Version:        1.5.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Epoch:          1
 Group:          System Environment/Base
 License:        GPLv2+
 Source0:        readahead-%{version}.tar.bz2
+Patch:          readahead-1.5.6-off.patch
 
 URL: 		https://fedorahosted.org/readahead/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -27,6 +28,7 @@ needed. Its goal is to speed up the boot process.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure --sbindir=/sbin
@@ -70,6 +72,10 @@ fi
 /sbin/readahead-collector
 
 %changelog
+* Mon Oct 14 2013 Harald Hoyer <harald@redhat.com> 1.5.6-2
+- turned off readahead by default
+Resolves: rhbz#1017072
+
 * Wed Mar 24 2010 Harald Hoyer <harald@redhat.com> 1.5.6-1
 - version 1.5.6
 - various bugfixes by Raphael Geissert 

@@ -1,0 +1,14 @@
+diff -up readahead-1.5.6/readahead.off readahead-1.5.6/readahead
+--- readahead-1.5.6/readahead.off	2013-10-21 17:38:19.922379471 +0200
++++ readahead-1.5.6/readahead	2013-10-14 19:38:27.250355748 +0200
+@@ -1,8 +1,8 @@
+ # enable readahead at system startup
+-READAHEAD="yes"
++READAHEAD="no"
+ 
+ # enable (at least monthly) readahead list collection
+-READAHEAD_COLLECT="yes"
++READAHEAD_COLLECT="no"
+ 
+ # collect x seconds more after prefdm started
+ READAHEAD_EXTRA_COLLECT="10"
